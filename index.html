@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mochila do Futuro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-icon">💰</span>
+        <div>
+          <p class="eyebrow">Ferramenta educativa</p>
+          <h1>Mochila do Futuro</h1>
+        </div>
+      </div>
+      <div class="badge">Planeje sonhos + futuro</div>
+    </header>
+
+    <main class="container">
+      <section class="hero card">
+        <div class="hero-copy">
+          <p class="kicker">Sua jornada financeira começa hoje</p>
+          <h2>Transforme sonhos em metas reais e divertidas.</h2>
+          <p>
+            Acompanhe como guardar, gastar com consciência, investir de forma inteligente
+            e preparar uma aposentadoria saudável desde cedo.
+          </p>
+          <ul class="mini-list">
+            <li>🎯 Defina seu sonho</li>
+            <li>📈 Veja seu orçamento</li>
+            <li>🌱 Aprenda sobre o futuro</li>
+          </ul>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="planet">🌍</div>
+          <div class="rocket">🚀</div>
+          <div class="coin coin-one">🪙</div>
+          <div class="coin coin-two">🪙</div>
+        </div>
+      </section>
+
+      <section class="panel card">
+        <div class="section-title">
+          <span>1</span>
+          <h3>Me conte sobre você</h3>
+        </div>
+
+        <form id="plannerForm">
+          <div class="form-grid">
+            <label>
+              Nome
+              <input type="text" id="name" placeholder="Ex: Ana" required />
+            </label>
+
+            <label>
+              Idade
+              <input type="number" id="age" min="5" max="18" value="12" required />
+            </label>
+
+            <label>
+              Mesada ou renda mensal
+              <input type="number" id="income" min="0" step="0.01" value="300" required />
+            </label>
+
+            <label>
+              Gastos fixos mensais
+              <input type="number" id="fixedCosts" min="0" step="0.01" value="80" required />
+            </label>
+
+            <label>
+              Gastos variáveis mensais
+              <input type="number" id="variableCosts" min="0" step="0.01" value="70" required />
+            </label>
+
+            <label>
+              Dinheiro que já tem guardado
+              <input type="number" id="currentSavings" min="0" step="0.01" value="200" required />
+            </label>
+
+            <label class="wide">
+              Qual é o seu grande sonho?
+              <input type="text" id="dream" placeholder="Ex: Comprar um skate, viajar, ter um celular" value="Comprar um skate" required />
+            </label>
+
+            <label>
+              Valor do sonho (R$)
+              <input type="number" id="dreamValue" min="0" step="0.01" value="1200" required />
+            </label>
+
+            <label>
+              Tempo que você quer para realizar o sonho (meses)
+              <input type="number" id="dreamMonths" min="1" value="12" required />
+            </label>
+
+            <label>
+              Idade de aposentadoria desejada
+              <input type="number" id="retirementAge" min="45" max="80" value="65" required />
+            </label>
+          </div>
+
+          <button type="submit" class="primary-btn">Gerar meu planejamento</button>
+        </form>
+      </section>
+
+      <section id="results" class="results hidden">
+        <div class="section-title">
+          <span>2</span>
+          <h3>Seu estudo personalizado</h3>
+        </div>
+
+        <div class="summary-grid">
+          <article class="metric-card blue">
+            <p>Dinheiro disponível</p>
+            <h4 id="availableMoney">R$ 0,00</h4>
+          </article>
+
+          <article class="metric-card pink">
+            <p>Valor para guardar</p>
+            <h4 id="monthlySave">R$ 0,00</h4>
+          </article>
+
+          <article class="metric-card yellow">
+            <p>Tempo para o sonho</p>
+            <h4 id="dreamTime">0 meses</h4>
+          </article>
+        </div>
+
+        <div class="study-box card">
+          <h4 id="studyTitle">Seu plano está pronto!</h4>
+          <p id="studyText"></p>
+        </div>
+
+        <div class="pilares-grid">
+          <article class="pillar-card">
+            <div class="icon">🎯</div>
+            <h5>1. Sonho</h5>
+            <p>Definir uma meta clara ajuda a escolher o que é prioridade e o que pode esperar.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="icon">💸</div>
+            <h5>2. Guardar</h5>
+            <p>Separar parte da renda antes de gastar deixa o seu futuro mais seguro.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="icon">📈</div>
+            <h5>3. Investir</h5>
+            <p>O dinheiro pode crescer quando é usado com estratégia e paciência.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="icon">🛡️</div>
+            <h5>4. Proteger</h5>
+            <p>Criar reserva para imprevistos evita problemas e reduz estresse.</p>
+          </article>
+
+          <article class="pillar-card highlight">
+            <div class="icon">🌅</div>
+            <h5>5. Aposentadoria</h5>
+            <p>Começar cedo permite que o futuro seja tranquilo, mesmo sem pressa.</p>
+          </article>
+        </div>
+
+        <div class="retirement card">
+          <h4>Mini aula: aposentadoria</h4>
+          <p id="retirementText"></p>
+          <div class="retirement-bar">
+            <div id="retirementProgress" class="retirement-progress"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+        
